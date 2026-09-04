@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PC LAB — сравнение игровых ноутбуков и настольных ПК.">
+    <title>PC LAB — лаборатория сравнений</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-glow page-glow-one"></div>
+    <div class="page-glow page-glow-two"></div>
+
+    <header class="site-header shell">
+        <a class="brand" href="#top" aria-label="PC LAB, на главную">
+            <span class="brand-mark">P</span>
+            <span>PC <strong>LAB</strong></span>
+        </a>
+        <nav class="main-nav" aria-label="Основная навигация">
+            <a class="active" href="#compare">Сравнение</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#method">О проекте</a>
+        </nav>
+        <div class="header-status"><span class="status-dot"></span> Данные обновлены сегодня</div>
+    </header>
+
+    <main id="top" class="shell">
+        <section class="hero" aria-labelledby="page-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span></span> Железо без лишнего шума</p>
+                <h1 id="page-title">Сравнивай.<br><em>Выбирай.</em> Играй.</h1>
+                <p class="hero-text">Два устройства. Все важные характеристики. Один честный выбор.</p>
+            </div>
+            <div class="hero-metric"><strong id="hero-device-count">78</strong><span>устройств<br>в каталоге</span></div>
+        </section>
+
+        <section id="compare" class="compare-section" aria-labelledby="compare-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">01 / Сравнительная лаборатория</p><h2 id="compare-title">Выбери свою пару</h2></div>
+                <span class="compare-label">LIVE COMPARISON <i></i></span>
+            </div>
+            <div class="device-pickers">
+                <label class="picker-card picker-a">
+                    <span class="picker-number">01</span><span class="picker-label">Первое устройство</span>
+                    <select id="device-a" aria-label="Первое устройство"></select>
+                </label>
+                <div class="versus">VS</div>
+                <label class="picker-card picker-b">
+                    <span class="picker-number">02</span><span class="picker-label">Второе устройство</span>
+                    <select id="device-b" aria-label="Второе устройство"></select>
+                </label>
+            </div>
+
+            <div class="comparison-intro" id="comparison-intro"></div>
+            <div class="compare-grid" id="compare-grid"></div>
+        </section>
+
+        <section id="catalog" class="catalog-section" aria-labelledby="catalog-title">
+            <div class="section-heading"><div><p class="eyebrow">02 / Каталог</p><h2 id="catalog-title">Вся коллекция</h2></div><span class="catalog-count" id="catalog-total">78 устройств / 2025</span></div>
+            <div class="catalog-tools" aria-label="Поиск, фильтры и сортировка каталога">
+                <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Поиск по модели, CPU или GPU" aria-label="Поиск устройства"></label>
+                <div class="filter-grid">
+                    <label class="filter-field"><span>Тип</span><select id="filter-type"><option value="all">Все устройства</option><option value="Ноутбук">Ноутбуки</option><option value="Настольный ПК">ПК</option></select></label>
+                    <label class="filter-field"><span>Производитель</span><select id="filter-brand"><option value="all">Все бренды</option></select></label>
+                    <label class="filter-field"><span>Видеокарта</span><select id="filter-gpu"><option value="all">Любая GPU</option></select></label>
+                    <label class="filter-field"><span>CPU: производитель</span><select id="filter-cpu-brand"><option value="all">AMD или Intel</option></select></label>
+                    <label class="filter-field"><span>CPU: модель</span><select id="filter-cpu"><option value="all">Любой CPU</option></select></label>
+                    <label class="filter-field"><span>GPU: производитель</span><select id="filter-gpu-brand"><option value="all">NVIDIA или AMD</option></select></label>
+                    <label class="filter-field"><span>VRAM</span><select id="filter-vram"><option value="all">Любой объём</option><option value="8">От 8 ГБ</option><option value="12">От 12 ГБ</option><option value="16">От 16 ГБ</option></select></label>
+                    <label class="filter-field"><span>GPU: модель</span><select id="filter-gpu"><option value="all">Любая GPU</option></select></label>
+                    <label class="filter-field"><span>TGP / GPU Power</span><select id="filter-tgp"><option value="all">Любая мощность</option><option value="45">От 45 Вт</option><option value="75">От 75 Вт</option><option value="100">От 100 Вт</option><option value="140">От 140 Вт</option><option value="175">От 175 Вт</option><option value="250">От 250 Вт</option><option value="300">От 300 Вт</option></select></label>
+                    <label class="filter-field"><span>RAM</span><select id="filter-ram"><option value="all">Любой объём</option><option value="16">От 16 ГБ</option><option value="32">От 32 ГБ</option><option value="64">От 64 ГБ</option></select></label>
+                    <label class="filter-field"><span>Разрешение</span><select id="filter-resolution"><option value="all">Любое</option><option value="1920">Full HD</option><option value="2560">2560 × 1600</option><option value="3840">4K</option></select></label>
+                    <label class="filter-field"><span>Частота экрана</span><select id="filter-refresh"><option value="all">Любая частота</option><option value="60">От 60 Гц</option><option value="120">От 120 Гц</option><option value="144">От 144 Гц</option><option value="240">От 240 Гц</option></select></label>
+                    <label class="filter-field"><span>Цена до</span><select id="filter-price"><option value="all">Без лимита</option><option value="150000">150 000 ₽</option><option value="200000">200 000 ₽</option><option value="250000">250 000 ₽</option></select></label>
+                    <label class="filter-field sort-field"><span>Сортировка</span><select id="sort-select"><option value="default">По умолчанию</option><option value="price-asc">Цена: сначала ниже</option><option value="price-desc">Цена: сначала выше</option><option value="score-desc">Производительность</option><option value="tgp-desc">TGP / GPU Power</option></select></label>
+                </div>
+                <div class="filter-footer"><span id="results-count">Найдено: 4 устройства</span><button id="reset-filters" type="button">Сбросить фильтры</button></div>
+            </div>
+            <div class="catalog-grid" id="catalog-grid"></div>
+            <p class="empty-state" id="empty-state" hidden>По этим параметрам ничего не найдено. Попробуйте изменить фильтры.</p>
+        </section>
+
+        <section id="method" class="method-band">
+            <div><p class="eyebrow">03 / Методика</p><h2>Характеристики,<br>которые имеют значение.</h2></div>
+            <p>Мы собираем ключевые параметры в одном месте, чтобы технические цифры превращались в понятное решение. Без рекламных обещаний.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer shell"><span>PC LAB / 2025</span><span>Сделано для тех, кто смотрит на FPS, а не на обещания.</span></footer>
+    <script src="script.js"></script>
+</body>
+</html>
